@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology Page</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: #ffd6d6;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Will you forgive me? MANNIPAAYA...? 🥺</h2>
+    <p>KALPANA,sorry🥺ennaku purithu na unna disappoint pannitanu, ennaku oru chance kuden, please</p>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="goToNextPage()">Yes</button>
+        <button id="noBtn">No</button>
+    </div>
+</div>
+
+<script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+        const x = Math.random() * 200 - 100;
+        const y = Math.random() * 200 - 100;
+
+        noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    function goToNextPage() {
+        window.location.href = "page3.html"; // change to your 3rd page
+    }
+</script>
+
+</body>
+</html>
